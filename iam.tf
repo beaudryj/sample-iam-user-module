@@ -4,7 +4,7 @@ resource "aws_iam_user" "user" {
 
 resource "aws_iam_policy" "policy" {
   count       = var.create_policy ? 1 : 0
-  name        = var.role_name
+  name        = "${var.role_name}-policy"
   description = "Policy Created for ${var.role_name} via Terraform Module"
 
   policy = var.policy
