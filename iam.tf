@@ -1,5 +1,5 @@
 resource "aws_iam_user" "user" {
-  name               = var.role_name
+  name = var.role_name
 }
 
 resource "aws_iam_policy" "policy" {
@@ -9,7 +9,6 @@ resource "aws_iam_policy" "policy" {
 
   policy = var.policy
 
-  tags = var.tags
 }
 
 
